@@ -13,6 +13,13 @@ gem 'sqlite3', group: [:development]
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+# Use twitter bootstrap
+gem 'twitter-bootstrap-rails'
+
+# Use Javascript source for compiling LESS files to CSS
+gem 'therubyracer'
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
