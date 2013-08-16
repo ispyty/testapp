@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  branded_name: MyString
+  status: 1
+  advertising_start_date: 2013-08-16
+  advertising_end_date: 2013-08-16
+  url: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  logo_url: MyString
+
+two:
+  branded_name: MyString
+  status: 1
+  advertising_start_date: 2013-08-16
+  advertising_end_date: 2013-08-16
+  url: MyString
+  street: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  logo_url: MyString
