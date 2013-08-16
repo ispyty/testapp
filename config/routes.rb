@@ -5,10 +5,10 @@ Testapp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'hello#index'
+  root 'posts#index'
 
   # Example of regular route:
-     get 'users/:id' => 'users#view'
+  #   get 'users/:id' => 'users#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
