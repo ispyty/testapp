@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130817080407) do
+ActiveRecord::Schema.define(version: 20130817090009) do
+
+  create_table "areas", force: true do |t|
+    t.string   "display_name"
+    t.string   "internal_name"
+    t.integer  "area_type"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "clients", force: true do |t|
     t.string   "branded_name"

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  display_name: MyString
+  internal_name: MyString
+  area_type: 1
+  latitude: MyString
+  longitude: MyString
+
+two:
+  display_name: MyString
+  internal_name: MyString
+  area_type: 1
+  latitude: MyString
+  longitude: MyString
