@@ -1,4 +1,4 @@
-class Client < ActiveRecord::Base
+class Store < ActiveRecord::Base
 
 STATUS_CODES = {
     10 => "PEND - ADD",
@@ -12,6 +12,6 @@ STATUS_CODES = {
     99 => "NON CUSTOMER"
   }.freeze
 
-has_many :stores
+belongs_to :client
 
 end

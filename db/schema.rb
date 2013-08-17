@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130816074644) do
+ActiveRecord::Schema.define(version: 20130817080407) do
 
   create_table "clients", force: true do |t|
     t.string   "branded_name"
@@ -31,6 +31,26 @@ ActiveRecord::Schema.define(version: 20130816074644) do
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "stores", force: true do |t|
+    t.integer  "client_id"
+    t.string   "branded_name"
+    t.string   "status_code"
+    t.date     "advertising_start_date"
+    t.date     "advertising_end_date"
+    t.string   "street"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "url"
+    t.string   "contact_name"
+    t.string   "contact_email"
+    t.string   "facility_number"
+    t.string   "marketing_number"
+    t.string   "logo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

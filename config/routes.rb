@@ -1,4 +1,6 @@
 Testapp::Application.routes.draw do
+  resources :stores
+
   resources :clients
 
   resources :posts
