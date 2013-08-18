@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  assigned_to: 1
+  status_code: MyString
+  description: MyString
+  cost: 9.99
+  start_date: 2013-08-17
+  end_date: 2013-08-17
+
+two:
+  name: MyString
+  assigned_to: 1
+  status_code: MyString
+  description: MyString
+  cost: 9.99
+  start_date: 2013-08-17
+  end_date: 2013-08-17

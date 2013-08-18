@@ -1,4 +1,8 @@
 Testapp::Application.routes.draw do
+  resources :features
+
+  resources :services
+
   resources :areas
 
   resources :stores
