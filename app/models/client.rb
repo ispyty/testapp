@@ -12,10 +12,10 @@ STATUS_CODES = {
   99 => "NON CUSTOMER"
 }.freeze
 
-has_many :stores, dependent: :destroy
+has_many :stores
 
 def status
-  return STATUS_CODES[self.status_code]
+  return STATUS_CODES[self.status]
 end
 
 end
