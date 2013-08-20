@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130818063206) do
+ActiveRecord::Schema.define(version: 20130820064605) do
 
   create_table "areas", force: true do |t|
     t.string   "display_name"
@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 20130818063206) do
   end
 
   create_table "stores", force: true do |t|
-    t.integer  "client_id"
     t.string   "branded_name"
     t.string   "status_code"
     t.date     "advertising_start_date"
@@ -83,7 +82,10 @@ ActiveRecord::Schema.define(version: 20130818063206) do
     t.string   "logo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "client_id"
   end
+
+  add_index "stores", ["client_id"], name: "index_stores_on_client_id"
 
   create_table "users", force: true do |t|
     t.string   "name"
