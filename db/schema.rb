@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130820065812) do
+ActiveRecord::Schema.define(version: 20130820070132) do
 
   create_table "areas", force: true do |t|
     t.string   "display_name"
@@ -41,10 +41,12 @@ ActiveRecord::Schema.define(version: 20130820065812) do
   create_table "features", force: true do |t|
     t.string   "name"
     t.string   "category"
-    t.integer  "assigned_to"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "store_id"
   end
+
+  add_index "features", ["store_id"], name: "index_features_on_store_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"
