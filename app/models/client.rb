@@ -14,7 +14,7 @@ STATUS_CODES = {
 
 has_many :stores
 
-def status
+def status_code
   return STATUS_CODES[self.status]
 end
 

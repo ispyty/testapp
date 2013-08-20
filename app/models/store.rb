@@ -1,4 +1,6 @@
 class Store < ActiveRecord::Base
+has_many :services
+has_many :features
 
 STATUS_CODES = {
     10 => "PEND - ADD",
