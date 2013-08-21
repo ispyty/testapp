@@ -44,6 +44,6 @@ class StoresControllerTest < ActionController::TestCase
       delete :destroy, id: @store
     end
 
-    assert_redirected_to stores_path
+    assert_redirected_to client_stores_path
   end
 end

@@ -1,8 +1,8 @@
-<%= form_for @store, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for([@client, @store], :url => client_stores_path, :html => { :class => 'form-horizontal' }) do |f| %>
   <div class="control-group">
     <%= f.label :client_id, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :client_id, :class => 'text_field' %>
+      <%#= f.text_field :client_id, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
@@ -93,6 +93,6 @@
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                stores_path, :class => 'btn' %>
+                client_stores_path, :class => 'btn' %>
   </div>
 <% end %>
