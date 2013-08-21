@@ -21,10 +21,12 @@ class StoresController < ApplicationController
   def edit
   end
 
+
   # POST /stores
   # POST /stores.json
   def create
-    @store = Store.new(store_params)
+    @client = Client.find(params[:id])
+    @store = @client.stores.build(params[:store])
 
     respond_to do |format|
       if @store.save

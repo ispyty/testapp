@@ -7,7 +7,9 @@ Testapp::Application.routes.draw do
 
   resources :stores
 
-  resources :clients
+  resources :clients do
+    resources :stores
+  end
 
   resources :posts
 

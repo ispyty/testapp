@@ -15,5 +15,4 @@ STATUS_CODES = {
   }.freeze
 
 belongs_to :client
-
 end
