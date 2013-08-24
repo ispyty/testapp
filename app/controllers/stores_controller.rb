@@ -25,12 +25,12 @@ class StoresController < ApplicationController
   # POST /stores
   # POST /stores.json
   def create
-    @client = Client.find(params[:id])
-    @store = @client.stores.build(params[:store])
+    @client = Client.find(params[:client_id])
+    @store = @client.stores.new(store_params)
 
     respond_to do |format|
       if @store.save
-        format.html { redirect_to @store, notice: 'Store was successfully created.' }
+        format.html { redirect_to [@client, @store], notice: 'Store was successfully created.' }
         format.json { render action: 'show', status: :created, location: @store }
       else
         format.html { render action: 'new' }
