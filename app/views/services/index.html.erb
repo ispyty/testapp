@@ -7,7 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:assigned_to) %></th>
+      <th><%= model_class.human_attribute_name(:store_id) %></th>
       <th><%= model_class.human_attribute_name(:status_code) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:cost) %></th>
@@ -22,7 +22,7 @@
       <tr>
         <td><%= link_to service.id, service_path(service) %></td>
         <td><%= service.name %></td>
-        <td><%= service.assigned_to %></td>
+        <td><%= service.store_id %></td>
         <td><%= service.status_code %></td>
         <td><%= service.description %></td>
         <td><%= service.cost %></td>

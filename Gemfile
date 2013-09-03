@@ -9,7 +9,10 @@ gem 'pg'
 
 # Use PostgreSQL as the database for Active Record
 gem 'sqlite3', group: [:development]
+
 gem 'pry', group: [:development]
+
+gem 'devise'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
