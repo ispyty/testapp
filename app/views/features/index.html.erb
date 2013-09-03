@@ -8,7 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:category) %></th>
-      <th><%= model_class.human_attribute_name(:assigned_to) %></th>
+      <th><%= model_class.human_attribute_name(:store_id) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -19,7 +19,7 @@
         <td><%= link_to feature.id, feature_path(feature) %></td>
         <td><%= feature.name %></td>
         <td><%= feature.category %></td>
-        <td><%= feature.assigned_to %></td>
+        <td><%= feature.store_id %></td>
         <td><%=l feature.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

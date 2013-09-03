@@ -46,14 +46,24 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Self Storage Listing Service</a>
+          <a class="brand" href="#">Self Storage Directory</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Search", "/search"  %></li>
               <li><%= link_to "Clients", "/clients"  %></li>
               <li><%= link_to "Stores", "/clients/stores"  %></li>
               <li><%= link_to "Services", "/services"  %></li>
               <li><%= link_to "Features", "/features"  %></li>
+              <li><%= link_to "Users", "/users"  %></li>
+            </ul>
+            <ul class="nav pull-right">
+              <% if(user_signed_in?) %>
+                <li><%= link_to('Edit Profile', edit_user_registration_path(@user))  %></li>
+                <li><%= link_to(current_user.email,'') %></li>
+                <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+              <% else %>
+                <li><%= link_to("Register", new_user_registration_path) %></li>
+                <li><%= link_to "Login", "/users/sign_in"  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -69,6 +79,8 @@
               <li><%= link_to "Search", "/path1"  %></li>
               <li><%= link_to "View by States", "/path2"  %></li>
               <li><%= link_to "View by Features", "/path3"  %></li>
+              <li><%= link_to "Sign Up", "/users/sign_up"  %></li>
+              <li><%= link_to "Sign In", "/users/sign_in"  %></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
