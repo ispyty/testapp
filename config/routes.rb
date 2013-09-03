@@ -1,10 +1,8 @@
 Testapp::Application.routes.draw do
+  devise_for :users
   resources :features
-
   resources :services
-
   resources :areas
-
   resources :clients do
     resources :stores
   end
