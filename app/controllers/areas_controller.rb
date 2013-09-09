@@ -10,6 +10,7 @@ class AreasController < ApplicationController
   # GET /areas/1
   # GET /areas/1.json
   def show
+    
   end
 
   # GET /areas/new

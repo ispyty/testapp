@@ -20,6 +20,9 @@ gem 'sass-rails', '~> 4.0.0'
 # Use twitter bootstrap
 gem 'twitter-bootstrap-rails'
 
+#DataTables
+gem 'jquery-datatables-rails', git: 'git://github.com/rweng/jquery-datatables-rails.git'
+
 # Use Javascript source for compiling LESS files to CSS
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 

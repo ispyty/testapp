@@ -49,11 +49,10 @@
           <a class="brand" href="#">Self Storage Directory</a>
           <div class="container-fluid nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Clients", "/clients"  %></li>
-              <li><%= link_to "Stores", "/clients/stores"  %></li>
-              <li><%= link_to "Services", "/services"  %></li>
-              <li><%= link_to "Features", "/features"  %></li>
-              <li><%= link_to "Users", "/users"  %></li>
+              <li><%= link_to "Clients", admin_clients_path %></li>
+              <li><%= link_to "Stores", admin_client_stores_path(@client)  %></li>
+              <li><%= link_to "Services", admin_services_path  %></li>
+              <li><%= link_to "Features", admin_features_path  %></li>
             </ul>
             <ul class="nav pull-right">
               <% if(user_signed_in?) %>

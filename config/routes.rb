@@ -1,10 +1,13 @@
 Testapp::Application.routes.draw do
   devise_for :users
-  resources :features
-  resources :services
   resources :areas
-  resources :clients do
-    resources :stores
+  
+  namespace :admin do
+    resources :clients do
+      resources :stores
+    end
+    resources :features
+    resources :services
   end
 
   resources :posts
