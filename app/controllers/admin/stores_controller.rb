@@ -46,7 +46,7 @@ class Admin::StoresController < ApplicationController
   def update
     respond_to do |format|
       if @store.update(store_params)
-        format.html { redirect_to [:admin, @client, @store], notice: 'Store was successfully updated.' }
+        format.html { redirect_to admin_client_stores_path, notice: 'Store was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

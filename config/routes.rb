@@ -1,7 +1,14 @@
 Testapp::Application.routes.draw do
+  # You can have the root of your site routed with "root"
+  root 'pages#home'
+
+  # Devise User Authentication
   devise_for :users
+
+  # This should ideally be the route for matching Area page requests
   resources :areas
   
+  # For signed in users
   namespace :admin do
     resources :clients do
       resources :stores
@@ -10,16 +17,18 @@ Testapp::Application.routes.draw do
     resources :services
   end
 
+  # Probably don't need anymore
   resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'posts#index'
+  # For the admin dashboard
+  get 'admin' => 'pages#admin'
 
-  # Example of regular route:
-  #   get 'users/:id' => 'users#view'
+  # Geographic Area Pages
+  get 'self-storage/:state' => 'areas#state'
+  get 'self-storage/:state/:city' => 'areas#city'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

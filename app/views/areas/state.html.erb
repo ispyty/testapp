@@ -1,0 +1,19 @@
+<%- model_class = Store -%>
+<div class="page-header">
+  <h1>Self Storage in <%= params[:state] %></h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:branded_name) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @stores_in_state.each do |store| %>
+      <tr>
+        <td><%= store.branded_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

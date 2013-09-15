@@ -43,7 +43,7 @@ class Admin::ClientsController < ApplicationController
   def update
     respond_to do |format|
       if @client.update(client_params)
-        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.html { redirect_to [:admin, @client], notice: 'Client was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }

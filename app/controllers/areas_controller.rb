@@ -1,5 +1,14 @@
 class AreasController < ApplicationController
   before_action :set_area, only: [:show, :edit, :update, :destroy]
+  layout "area"
+
+  def state
+    @stores_in_state = Store.where(:state => params[:state])
+  end
+
+  def city
+    @stores_in_city = Store.where(:state => params[:state], :city => params[:city])
+  end
 
   # GET /areas
   # GET /areas.json

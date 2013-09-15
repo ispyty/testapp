@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  newstore: "New Store"
+  newclient: "New Client"
+  viewallstores: "View All Stores"
