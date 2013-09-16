@@ -5,8 +5,7 @@ Testapp::Application.routes.draw do
   # Devise User Authentication
   devise_for :users
 
-  # This should ideally be the route for matching Area page requests
-  resources :areas
+  get 'profile' => 'users#profile'
   
   # For signed in users
   namespace :admin do

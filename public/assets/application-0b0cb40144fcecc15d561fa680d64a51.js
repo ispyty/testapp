@@ -1,3 +1,39 @@
+(function() {
+
+
+}).call(this);
+(function() {
+  jQuery(function() {
+    $("a[rel~=popover], .has-popover").popover();
+    return $("a[rel~=tooltip], .has-tooltip").tooltip();
+  });
+
+}).call(this);
+(function() {
+  jQuery(function() {});
+
+  $('.dataTable').dataTable({
+    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
+    "sPaginationType": "bootstrap"
+  });
+
+}).call(this);
+(function() {
+
+
+}).call(this);
+(function() {
+
+
+}).call(this);
+(function() {
+
+
+}).call(this);
+(function() {
+
+
+}).call(this);
 /*!
  * jQuery JavaScript Library v1.10.2
  * http://jquery.com/
@@ -12915,44 +12951,6 @@ if ( typeof module === "object" && module && typeof module.exports === "object" 
     visit: visit,
     pagesCached: pagesCached
   };
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-  jQuery(function() {
-    $("a[rel~=popover], .has-popover").popover();
-    return $("a[rel~=tooltip], .has-tooltip").tooltip();
-  });
-
-}).call(this);
-(function() {
-  $('.clients').dataTable({
-    "sDom": "<'row-fluid'<'span6'l><'span6'f>r>t<'row-fluid'<'span6'i><'span6'p>>",
-    "sPaginationType": "bootstrap"
-  });
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
-
-}).call(this);
-(function() {
-
 
 }).call(this);
 /**

@@ -16,4 +16,18 @@ class UsersController < ApplicationController
       format.xml  { render :xml => @user }
     end
   end
+
+  def profile
+    @user = current_user
+  end
+
+  def create
+    @user = User.create( params[:user, :avatar] )
+  end
+
+private
+
+  def user_params
+    params.require(:user).permit(:avatar)
+  end
 end

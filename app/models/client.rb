@@ -14,4 +14,8 @@ def status_codes
   return STATUS_CODES
 end
 
+def status_code
+	return STATUS_CODES[self.status]
+end
+
 end

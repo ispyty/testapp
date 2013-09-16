@@ -7,12 +7,14 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:branded_name) %></th>
+      <th><%= model_class.human_attribute_name(:city) %></th>
     </tr>
   </thead>
   <tbody>
     <% @stores_in_state.each do |store| %>
       <tr>
         <td><%= store.branded_name %></td>
+        <td><%= store.city %></td>
       </tr>
     <% end %>
   </tbody>
