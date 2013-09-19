@@ -1,7 +1,4 @@
 Testapp::Application.routes.draw do
-  # You can have the root of your site routed with "root"
-  root 'pages#home'
-
   # Devise User Authentication
   devise_for :users
 
@@ -24,6 +21,10 @@ Testapp::Application.routes.draw do
 
   # For the admin dashboard
   get 'admin' => 'pages#admin'
+  
+  # You can have the root of your site routed with "root"
+  root 'pages#home'
+
 
   # Geographic Area Pages
   get 'self-storage/:state' => 'areas#state'
