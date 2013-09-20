@@ -1,0 +1,8 @@
+<%- model_class = Store -%>
+<div class="page-header">
+  <h4>Select a State</h4>
+</div>
+
+<div>
+  <%= select_tag(:state, options_for_select(@states)) %>
+</div>

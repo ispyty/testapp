@@ -27,8 +27,11 @@ Testapp::Application.routes.draw do
 
 
   # Geographic Area Pages
+  get 'self-storage/' => 'areas#index'
   get 'self-storage/:state' => 'areas#state'
   get 'self-storage/:state/:city' => 'areas#city'
+
+  resources :areas
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

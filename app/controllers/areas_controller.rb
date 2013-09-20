@@ -3,8 +3,14 @@ class AreasController < ApplicationController
   layout "area"
 
   def state
+    @states = Store.distinct.order(:state).pluck(:state)
+
+    if !params[:state].nil?
+      @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
+    end
+    
     @stores_in_state = Store.where(:state => params[:state])
-    @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
+
   end
 
   def city
@@ -12,10 +18,24 @@ class AreasController < ApplicationController
     @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
   end
 
+  def states
+    @states = Store.distinct.order(:state).pluck(:state)
+  end
+
+  def cities
+    @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
+  end
+
   # GET /areas
   # GET /areas.json
   def index
     @areas = Area.all
+    @states = Store.distinct.order(:state).pluck(:state)
+
+    if params[:state].nil?
+      @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
+      @stores_in_state = Store.where(:state => params[:state])
+    end
   end
 
   # GET /areas/1
