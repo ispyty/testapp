@@ -1,0 +1,8 @@
+<%- model_class = Client -%>
+<% load_client %>
+<ul class="nav nav-list">
+  <li class="nav-header">Clients</li>
+  <li><%= link_to "<i class='icon-zoom-in'></i>Client Info".html_safe, admin_client_path(@client)  %></li>
+  <li><%= link_to "<i class='icon-search'></i>View Clients".html_safe, admin_clients_path  %></li>
+  <li><%= link_to "<i class='icon-plus-sign'></i>Add New Client".html_safe, new_admin_client_path  %></li>
+</ul>

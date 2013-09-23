@@ -1,0 +1,8 @@
+<%- model_class = Store -%>
+<% load_store %>
+<ul class="nav nav-list">
+  <li class="nav-header">Stores</li>
+  <li><%= link_to "<i class='icon-zoom-in'></i>Store Info".html_safe, admin_client_store_path(@client, @store)  %></li>
+  <li><%= link_to "<i class='icon-search'></i>View Stores".html_safe, admin_client_stores_path(@client)  %></li>
+  <li><%= link_to "<i class='icon-plus-sign'></i>Add New Store".html_safe, new_admin_client_store_path(@client)  %></li>
+</ul>

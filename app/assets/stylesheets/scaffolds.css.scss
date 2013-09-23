@@ -18,6 +18,17 @@ pre {
   font-size: 11px;
 }
 
+$blue: #2F4375;
+$bluebg: #E4F7FF;
+
+h1, h2, h3, h4, h5, h6 {
+  color: $blue;
+}
+
+.well {
+  background-color: $bluebg;
+}
+
 a {
   color: #000;
   &:visited {
@@ -27,6 +38,19 @@ a {
     color: #fff;
   }
 }
+.navbar-inner {
+  background-color: darkblue;
+}
+.nav-list a {
+  color: #0088cc;
+  &:visited {
+    color: #0088cc;
+  }
+  &:hover {
+    color: #005580;
+  }
+}
+
 
 div {
   &.field, &.actions {

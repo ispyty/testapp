@@ -1,0 +1,9 @@
+<%- model_class = Service -%>
+
+<ul class="nav nav-list">
+  <li class="nav-header">Services</li>
+  <li><%= link_to "View Client Services", admin_client_path(@client)  %></li>
+  <li><%= link_to "View Store Services", admin_client_store_path(@client, @store)  %></li>
+  <li><%= link_to "Assign New Service", "/path2"  %></li>
+  <li><%= link_to "Add New Service", "/path3"  %></li>
+</ul>

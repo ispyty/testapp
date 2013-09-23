@@ -1,6 +1,7 @@
 class Admin::ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  layout "admin"
 
   # GET /clients
   # GET /clients.json
@@ -11,6 +12,7 @@ class Admin::ClientsController < ApplicationController
   # GET /clients/1
   # GET /clients/1.json
   def show
+    session[:client_id] = params[:id]
   end
 
   # GET /clients/new
@@ -57,7 +59,7 @@ class Admin::ClientsController < ApplicationController
   def destroy
     @client.destroy
     respond_to do |format|
-      format.html { redirect_to clients_url }
+      format.html { redirect_to admin_clients_url }
       format.json { head :no_content }
     end
   end

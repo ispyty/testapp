@@ -1,7 +1,7 @@
 <%- model_class = Store -%>
-<div class="page-header">
-  <h4>Cities</h4>
-</div>
+
+<h4>Cities</h4>
+
 <div>
-  <%= select_tag(:city, options_for_select(@cities)) %>
+  <%= select_tag("city-select", options_for_select(@cities)) %>
 </div>

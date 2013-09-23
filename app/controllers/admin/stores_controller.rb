@@ -1,17 +1,20 @@
 class Admin::StoresController < ApplicationController
   before_action :set_store, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  layout "admin"
 
   # GET /stores
   # GET /stores.json
   def index
-    
-    @stores = Store.where(:client_id => params[:client_id])
+    Rails.logger.info(session.inspect)
+    session[:store_id] = params[:id]
+    @stores = Store.where(:client_id => session[:client_id])
   end
 
   # GET /stores/1
   # GET /stores/1.json
   def show
+    session[:store_id] = params[:id]
   end
 
   # GET /stores/new
@@ -60,7 +63,7 @@ class Admin::StoresController < ApplicationController
   def destroy
     @store.destroy
     respond_to do |format|
-      format.html { redirect_to stores_url }
+      format.html { redirect_to admin_client_stores_url }
       format.json { head :no_content }
     end
   end

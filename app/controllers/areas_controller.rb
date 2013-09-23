@@ -14,8 +14,9 @@ class AreasController < ApplicationController
   end
 
   def city
-    @stores_in_city = Store.where(:state => params[:state], :city => params[:city])
+    @states = Store.distinct.order(:state).pluck(:state)
     @cities = Store.distinct.where(:state => params[:state]).order(:city).pluck(:city)
+    @stores_in_city = Store.where(:state => params[:state], :city => params[:city])
   end
 
   def states

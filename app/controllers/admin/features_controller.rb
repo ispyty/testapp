@@ -1,6 +1,7 @@
 class Admin::FeaturesController < ApplicationController
   before_action :set_feature, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!
+  layout "admin"
 
   # GET /features
   # GET /features.json
