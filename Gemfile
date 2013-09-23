@@ -39,6 +39,9 @@ gem 'coffee-rails', '~> 4.0.0'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
+# Add geocoding support
+gem 'geocoder'
+
 # Use Javascript source for compiling LESS files to CSS
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 
