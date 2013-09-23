@@ -1,6 +1,11 @@
 class Store < ActiveRecord::Base
+belongs_to :client
+
 has_many :services
 has_many :features
+
+geocoded_by :full_street_address, :latitude  => :lat, :longitude => :lon # ActiveRecord, can also be an IP address
+after_validation :geocode          # auto-fetch coordinates
 
 
 STATUS_CODES = {
@@ -11,10 +16,13 @@ STATUS_CODES = {
     "Not a Customer" => 50
 }
 
-belongs_to :client
 
 def status_codes
     return STATUS_CODES
+end
+
+def full_street_address
+ [street, city, state].compact.join(', ')
 end
 
 end
