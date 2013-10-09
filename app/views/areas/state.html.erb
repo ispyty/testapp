@@ -14,7 +14,7 @@
     <% @stores_in_state.each do |store| %>
       <tr>
         <td><%= store.branded_name %></td>
-        <td><%= store.city %></td>
+        <td><%= link_to store.city %></td>
       </tr>
     <% end %>
   </tbody>
